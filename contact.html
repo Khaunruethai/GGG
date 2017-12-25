@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
   <title>contact</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,8 +43,26 @@
 
 <br>
 <br>
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 17.8140808, lng: 102.7422209};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAbLgfbG-9hLmVdHuiRPseDyUDyNQURs4&callback=initMap">
+    </script>
 <br>
 <br>
+
 <center><p><a href="login.php"><span style = "font-size:40px;"><span style="color:#999999;">" CONTACT "</a></span><br></center>
 <center><div class="container">
   <div class="row">
